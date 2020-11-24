@@ -1,4 +1,5 @@
-from flask import Flask, request, make_response, redirect, render_template, session, url_for, flash
+from flask import Flask, request, make_response, redirect  
+from flask import render_template, session, url_for, flash
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms.fields import StringField, PasswordField, SubmitField
@@ -11,7 +12,9 @@ bootstrap = Bootstrap(app)
 app.config['SECRET_KEY'] = 'SUPER SECRETO'
 
 
-todos = ['Comprar cafe', 'Enviar solicitud de compra', 'Entregar video a productor ']
+todos = ['Comprar cafe', 'Enviar solicitud de compra', 
+         'Entregar video a productor '
+         ]
 
 
 class LoginForm(FlaskForm):
